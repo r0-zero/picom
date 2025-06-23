@@ -96,6 +96,15 @@ $ ninja -C build install
 
 Default install prefix is `/usr/local`, you can change it with `meson configure -Dprefix=<path> build`
 
+#### Void Linux
+```
+git clone https://gitlab.com/nesstero/template-void-picom-zero
+mv template-void-picom-zero <path_void-packages>/srcpkgs/picom-zero
+cd <path_void-packages>
+./xbps-src pkg picom-zero
+sudo xbps-install --repository=hostdir/binpkgs picom-zero
+```
+
 ## Running
 To launch with all animations as a background process you can use:
 `picom --animations -b`
